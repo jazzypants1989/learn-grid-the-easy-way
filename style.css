@@ -146,7 +146,6 @@ h3 {
 .testimonial-grid {
   display: grid;
   gap: 1.5rem;
-  grid-auto-columns: 1fr;
   grid-template-areas:
    'one'
    'two'
@@ -182,27 +181,27 @@ h3 {
   grid-area: five;
 }
 
-@media screen and (min-width: 33em) {
+@media screen and (min-width: 30em) {
   .testimonial-grid {
       grid-template-areas:
-      "one one"
-      "two three"
-      "five five"
+      "one three"
+      "two five"
+      "four five"
       "four four";
   }
 }
 
-@media screen and (min-width: 38em) {
+@media screen and (min-width: 35em) {
   .testimonial-grid {
     grid-template-areas:
-     'one one'
-     'two five'
-     'three five'
-     'four four';
+     "one three"
+     "two five"
+     "five five"
+     "four four";
   }
 }
 
-@media screen and (min-width: 54em) {
+@media screen and (min-width: 40em) {
   .testimonial-grid {
       grid-template-areas:
       "one one two"
@@ -211,7 +210,7 @@ h3 {
   }
 }
 
-@media screen and (min-width: 75em) {
+@media screen and (min-width: 45em) {
   .testimonial-grid {
       grid-template-areas:
       "one one two five"

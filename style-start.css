@@ -144,6 +144,14 @@ h3 {
 
 /* components */
 .testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas:
+  'one'
+  'two'
+  'three'
+  'four'
+  'five';
   padding-block: 2rem;
   width: min(95%, 70rem);
   margin-inline: auto;
@@ -154,6 +162,44 @@ h3 {
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
+}
+
+.grid-one {
+  grid-area: one;
+}
+
+.grid-two {
+  grid-area: two;
+}
+
+.grid-three {
+  grid-area: three;
+}
+
+.grid-four {
+  grid-area: five;
+}
+
+.grid-five {
+  grid-area: four;
+}
+
+@media (min-width: 50em) {
+  .testimonial-grid {
+    grid-template-areas: 
+    'one one two four'
+    'three three five four';
+  }
+}
+
+@media (min-width: 30em) {
+  .testimonial-grid {
+    grid-template-areas:
+    'one one'
+    'two five'
+    'three three'
+    'four four';
+  }
 }
 
 .testimonial.quote {
